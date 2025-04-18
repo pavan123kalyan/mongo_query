@@ -58,3 +58,14 @@
 //     salary: { $gte: 50000 },
 //     department: "CSE",
 //   });
+
+//db.employees.updateOne(
+//     {email:"pavan@gmail.com"}, 
+//     { $inc: { points: 3 } }
+// );  --> increments points by 3 to one data
+
+// db.employees.updateMany(
+//     {email:"pavan@gmail.com"}, 
+//     { $inc: { points: -3 } }
+// );  --> decrements data by 3 to many data which has email as pavan@gmail.com
+
