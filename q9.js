@@ -1,6 +1,6 @@
 db.employees.find({
-    salary: { $gte: 1500 },
-    department: "HR",
+    salary: { $gte: 50000 },
+    department: "CSE",
   });
   
   db.employees.find({
