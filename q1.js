@@ -69,3 +69,7 @@
 //     { $inc: { points: -3 } }
 // );  --> decrements data by 3 to many data which has email as pavan@gmail.com
 
+//db.employees.updateMany(
+//     {}, 
+//     { $rename: { points:"ratings" } }
+// );     ---> Rename points to ratings.
