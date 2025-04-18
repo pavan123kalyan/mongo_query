@@ -83,3 +83,14 @@
 //     {}, 
 //     { $unset: {test:""}  }
 // );     --->It removes the set in many data.
+
+//db.employees.updateOne(
+//     {email:"pavan@gmail.com"},
+//     {$push:{score:4}}
+// )      ---> It adds score=4 to same mail.
+
+// db.employees.updateOne(
+//     {email:"pavan@gmail.com"},
+//     {$pull:{score:4}}
+// )    --> It deletes score=4
+
