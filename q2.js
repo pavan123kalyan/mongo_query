@@ -4,7 +4,6 @@ db.products.insertOne({
     email: "john@email.com",
     pass: "1234",
   });
-  
   db.products.find();
   
   db.products.renameCollection("users")
