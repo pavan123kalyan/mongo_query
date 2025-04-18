@@ -1,4 +1,4 @@
-db.users.deleteOne({ name: "test1" });
+db.users.deleteOne({ name: "pavan" });
 
 db.employees.drop();
 
@@ -23,7 +23,7 @@ db.employees.drop();
          skills:["python","DSA","Reactjs","MongoDB","ML"],
          date:Date()
      })
-     
+
      db.employees.insertOne({
            name:'Hitesh',
            email:'athi@gmail.com',

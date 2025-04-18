@@ -6,18 +6,18 @@ db.employees.find({
   db.employees.find({
     $or: [
       {
-        salary: { $gte: 1500 },
+        salary: { $gte: 50000 },
       },
-      { department: "HR" },
+      { department: "CSE" },
     ],
   });
   
   db.employees.find({
     $and: [
       {
-        salary: { $gte: 1500 },
+        salary: { $gte: 50000 },
       },
-      { department: "HR" },
+      { department: "CSE" },
     ],
   });
   
@@ -29,18 +29,18 @@ db.employees.find({
   db.employees.find({
     $nor: [
       {
-        salary: { $gte: 1500 },
+        salary: { $gte: 50000 },
       },
-      { department: "HR" },
+      { department: "CSE" },
     ],
   });
   
   db.employees.find(
-      { department: { $ne: "HR" } });
+      { department: { $ne: "CSE" } });
   
   db.employees.insertOne({
-      name:"test1",
-      email:"test1@email.com"
+      name:"arya",
+      email:"arya@email.com"
   })
   
   db.employees.find({

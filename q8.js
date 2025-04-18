@@ -1,27 +1,27 @@
 db.employees.find(
-    {department:"HR"}
+    {department:"CSE"}
 )
 
 db.employees.find(
-    {department:{$eq:"HR"}}
+    {department:{$eq:"CSE"}}
 )
 
 db.employees.find(
-    {salary:{$eq:1500}}
+    {salary:{$eq:50000}}
 )
 
 db.employees.find(
-    {salary:{$gt:1500}}
+    {salary:{$gt:50000}}
 )
 
 db.employees.find(
-    {salary:{$lt:1500}}
+    {salary:{$lt:50000}}
 )
 
 db.employees.find(
-    {salary:{$lte:1500}}
+    {salary:{$lte:50000}}
 )
 
 db.employees.find(
-    {salary:{$gte:1500}}
+    {salary:{$gte:50000}}
 )

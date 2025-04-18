@@ -1,10 +1,10 @@
 db.employees.updateOne(
-    {email:"john@gmail.com"},
+    {email:"pavan@gmail.com"},
     {$push:{score:4}}
 )
 
 db.employees.updateOne(
-    {email:"john@gmail.com"},
+    {email:"pavan@gmail.com"},
     {$pull:{score:4}}
 )
 

@@ -4,12 +4,12 @@ db.employees.updateMany(
 );
 
 db.employees.updateOne(
-    {email:"cathy@gmail.com"}, 
+    {email:"pavan@gmail.com"}, 
     { $inc: { points: 3 } }
 );
 
 db.employees.updateOne(
-    {email:"cathy@gmail.com"}, 
+    {email:"pavan@gmail.com"}, 
     { $inc: { points: -2 } }
 );
 

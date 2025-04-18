@@ -1,9 +1,9 @@
 db.employees.insertMany([
-    { name: "test1", department: "test" },
-    { name: "test2", department: "test" },
-    { name: "test3", department: "test" },
+    { name: "arya", department: "CSE" },
+    { name: "varun", department: "CSE" },
+    { name: "vardhan", department: "CSE" },
   ]);
   
-  db.employees.deleteOne({ department: "test" });
+  db.employees.deleteOne({ department: "CSE" });
   
-  db.employees.deleteMany({ department: "test" });
+  db.employees.deleteMany({ department: "CSE" });

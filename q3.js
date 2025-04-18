@@ -1,13 +1,13 @@
 db.users.insertMany([
     {
-      name: "Mike",
-      email: "mike@email.com",
+      name: "pavan",
+      email: "pavan@email.com",
       pass: "1234",
     },
     {
-      name: "Cathy",
-      email: "cathy@email.com",
-      pass: "1234",
+      name: "kalyan",
+      email: "kalyan@email.com",
+      pass: "143",
     },
   ]);
   

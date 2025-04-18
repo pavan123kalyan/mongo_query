@@ -1,8 +1,8 @@
 
 db.products.insertOne({
-    name: "John",
-    email: "john@email.com",
-    pass: "1234",
+    name: "pavan",
+    email: "pavan@email.com",
+    pass: "1432",
   });
   db.products.find();
   
