@@ -73,3 +73,13 @@
 //     {}, 
 //     { $rename: { points:"ratings" } }
 // );     ---> Rename points to ratings.
+
+// db.employees.updateMany(
+//     {}, 
+//     { $set: {test:1}  }
+// );   --> It adds test=1 to all data
+
+// db.employees.updateMany(
+//     {}, 
+//     { $unset: {test:""}  }
+// );     --->It removes the set in many data.
