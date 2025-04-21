@@ -36,6 +36,7 @@
 // db.employees.find().skip(1);  It skips 1st data.
 
 // db.users1.updateOne({name:"varun"},{$set:{location:"Hyderabad"}})  It adds new column location.
+//db.employees.updateOne({email:"sriram@gmail.com"},{$set:{salary:2500}})
 //db.users1.updateMany({name:{$in:["arya","sailu"]}},{$set:{location:"Bangalore"}})
 
 //db.users1.find({name:"arya"})  Here {} this brackets mandatory.
@@ -58,3 +59,18 @@
 //     salary: { $gte: 50000 },
 //     department: "CSE",
 //   });
+
+//db.employees.find({$or:[{salary:{$gte:50000},},{department:"CSE"},],});  Here or tells that it retrieve data of salary>=50k or deparment=CSE.
+//db.employees.find({$and:[{salary:{$gte:50000},},{department:"CSE"},],}); --> It satisfies both conditions.
+// db.employees.find({$nor:[{salary:{$gte:80000},},{department:"CSE"},],});   --> It returns documents that do NOT match any of the conditions inside the array.
+
+//  db.employees.find({
+//     department:{$exists:true}
+// })  -->It checks department exists or not.
+
+//db.employees.updateMany({},{$set:{org:"Google"}});  --> Org adds to all data 
+//db.employees.updateOne({},{$set:{org:"Google"}});  --> Org adds to 1st data only.
+
+//db.employees.find({department:{$in :["CSE","CSM"]}})  --> The $in operator checks if the value of a field matches any value in a given array.
+//db.employees.find({department:{$nin :["CSE","CSM"]}})  -->$nin=not in .. This query returns all employees whose department is not "CSE" and not "CSM".
+//db.employees.find().explain("executionStats")   --->  
