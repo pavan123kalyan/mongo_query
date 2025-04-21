@@ -108,5 +108,8 @@
 //     {email:"pavan@gmail.com"},
 //     {$pull:{score:4}}
 // )    --> It deletes score=4
+//db.employees.getIndexes()
+//db.employees.find({name:"Pavan"}).explain("executionStats")
+// db.employees.find().explain("executionStats")
 
 
