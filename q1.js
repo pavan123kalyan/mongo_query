@@ -74,3 +74,39 @@
 //db.employees.find({department:{$in :["CSE","CSM"]}})  --> The $in operator checks if the value of a field matches any value in a given array.
 //db.employees.find({department:{$nin :["CSE","CSM"]}})  -->$nin=not in .. This query returns all employees whose department is not "CSE" and not "CSM".
 //db.employees.find().explain("executionStats")   --->  
+//db.employees.updateOne(
+//     {email:"pavan@gmail.com"}, 
+//     { $inc: { points: 3 } }
+// );  --> increments points by 3 to one data
+
+// db.employees.updateMany(
+//     {email:"pavan@gmail.com"}, 
+//     { $inc: { points: -3 } }
+// );  --> decrements data by 3 to many data which has email as pavan@gmail.com
+
+//db.employees.updateMany(
+//     {}, 
+//     { $rename: { points:"ratings" } }
+// );     ---> Rename points to ratings.
+
+// db.employees.updateMany(
+//     {}, 
+//     { $set: {test:1}  }
+// );   --> It adds test=1 to all data
+
+// db.employees.updateMany(
+//     {}, 
+//     { $unset: {test:""}  }
+// );     --->It removes the set in many data.
+
+//db.employees.updateOne(
+//     {email:"pavan@gmail.com"},
+//     {$push:{score:4}}
+// )      ---> It adds score=4 to same mail.
+
+// db.employees.updateOne(
+//     {email:"pavan@gmail.com"},
+//     {$pull:{score:4}}
+// )    --> It deletes score=4
+
+
