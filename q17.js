@@ -29,3 +29,4 @@ db.employees.aggregate([
     },
             {$group:{_id:"department",total:{$sum:"$salaryStr"}}},
         ])
+        
