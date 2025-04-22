@@ -1,4 +1,4 @@
- use mystore
+//  use mystore
 
 db.createCollection("Cars")
 

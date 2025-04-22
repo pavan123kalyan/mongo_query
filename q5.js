@@ -2,16 +2,16 @@ db.users.deleteOne({ name: "pavan" });
 
 db.employees.drop();
 
-  db.employees.insertOne({
-        name:'siddhu',
-        email:'siddhu@gmail.com',
-        address:{city:"Dundigal",state:'TG'},
-        department:'IT',
-        salary:99999,
-        score:[6,2,6,4],
-      skills:["python","DSA","Reactjs","MongoDB"],
-      date:Date(),
-    });
+    db.employees.insertOne({
+          name:'siddhu',
+          email:'siddhu@gmail.com',
+          address:{city:"Dundigal",state:'TG'},
+          department:'IT',
+          salary:99999,
+          score:[6,2,6,4],
+        skills:["python","DSA","Reactjs","MongoDB"],
+        date:Date(),
+      });
 
    db.employees.insertOne({
        name:'sriram',

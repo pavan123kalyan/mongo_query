@@ -108,8 +108,53 @@
 //     {email:"pavan@gmail.com"},
 //     {$pull:{score:4}}
 // )    --> It deletes score=4
-//db.employees.getIndexes()
+
+db.employees.createIndex({email:1})
+db.employees.getIndexes()
+db.employees.dropIndexes("name_1")
+
 //db.employees.find({name:"Pavan"}).explain("executionStats")
 // db.employees.find().explain("executionStats")
 
 
+db.createCollection("customers",
+    {
+        validator:{
+            
+                $jsonSchema:{
+                    bsonType:"object",
+                    required:["name","email"],
+                    properties:{
+                        name:{
+                            bsonType:"string",
+                            description:"must be string and required",
+                        },
+                    },
+                },
+        },
+    },
+)
+
+//Aggregate Pipeline
+db.employees.aggregate([
+    {$match:{department:"IT"}}
+])
+// --> It gives details of matching department.
+
+    db.employees.aggregate([
+        {$match:{department:"IT"}},
+        {$project:{_id:0,name:1,salary:1}}
+    ])
+//output -->  [ { name: 'siddhu', salary: 99999 } ]
+
+db.employees.aggregate([
+    
+    {$project:{_id:0,name:1,salary:1}}
+])
+//output --> [
+//   { name: 'Pavan', salary: 95000 },
+//   { name: 'siddhu', salary: 99999 },
+//   { name: 'sriram', salary: 50000 },
+//   { name: 'Hitesh', salary: 50000 }
+// ]
+//
