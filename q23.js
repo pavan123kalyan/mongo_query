@@ -1,4 +1,5 @@
-https://www.mongodb.com/try/download/database-tools
+
+/*https://www.mongodb.com/try/download/database-tools
 
 after installation
 
@@ -14,3 +15,4 @@ mongodump -d mydb -o d:\bck
 db.dropDatabase("mydb")
 
 mongorestore -d mydb d:/bck/mydb
+*/

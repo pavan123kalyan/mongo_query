@@ -1,5 +1,5 @@
 //use admin
-
+/*
 db.createUser({
     user: "admin",
     pwd: "admin",
@@ -30,3 +30,4 @@ db.createUser({
       pwd:"1234",
       roles:[{role:"readWrite",db:"mydb"}]
   })
+  */

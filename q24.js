@@ -38,4 +38,8 @@ rs.shutdownServer()
 
 automatically 27019 or 27020 will become primary
 login using mongosh
+
+
+to start 27018
+start mongod -replSet rs1 -logpath d:\mongo-replica\data1\1.log --dbpath d:\mongo-replica\data1\ --port 27018
 */
