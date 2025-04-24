@@ -56,6 +56,32 @@ db.posts.aggregate([
     }
   ]);
 
+  db.authors.aggregate([
+    {
+      $lookup: {
+        from: "posts",
+        localField: "_id",
+        foreignField: "authorId",
+        as: "posts",
+      },
+    },
+    { $match: { "posts.title": "title 5" } },
+  ]);
+  
+
+
+  db.authors.aggregate([
+    {
+      $lookup: {
+        from: "posts",
+        localField: "_id",
+        foreignField: "authorId",
+        as: "posts",
+      },
+    },
+    { $match: { "posts.title": "title 5" } },
+    { $unwind: "$posts" },
+  ]);
   
 db.authors.aggregate([
     {$lookup:{
@@ -67,6 +93,21 @@ db.authors.aggregate([
     {$unwind:"$posts"}
 
 ])
+
+db.authors.aggregate([
+    {
+      $lookup: {
+        from: "posts",
+        let: { authorId: "$_id" },
+        pipeline: [
+          { $match: { $expr: { $eq: ["$authorId", "$$authorId"] } } },
+          { $match: { $expr: { $eq: ["$title", "title 5"] } } },
+        ],
+        as:"posts"
+      },
+    },
+    {$unwind:"$posts"}
+  ]);
 
 
 
